@@ -44,9 +44,9 @@ typedef struct s_shared
 }	t_shared;
 
 //main utilities
-int		read_input_args(int *in_args, char **argv);
+int		read_input_args(long *in_args, char **argv);
 ssize_t	philo_atoi(const char *str, int *i);
-void	fill_philo_args(t_shared *philo_args, int *in_args);
+void	fill_philo_args(t_shared *philo_args, long *in_args);
 
 //Initiate and make processes as philosophers
 void	launch_philosophers(t_shared *philo_args);

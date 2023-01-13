@@ -12,7 +12,7 @@
 
 #include "philosophers_bonus.h"
 
-void	fill_philo_args(t_shared *philo_args, int *in_args)
+void	fill_philo_args(t_shared *philo_args, long *in_args)
 {
 	struct timeval	start;
 
@@ -28,7 +28,7 @@ void	fill_philo_args(t_shared *philo_args, int *in_args)
 			+ start.tv_usec) + (500 * philo_args->no_philos);
 }
 
-int	read_input_args(int *in_args, char **argv)
+int	read_input_args(long *in_args, char **argv)
 {
 	int	i;
 	int	n;

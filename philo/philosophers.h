@@ -73,9 +73,9 @@ typedef struct s_inthread
 }	t_in_thread_vars;
 
 //main utilities
-int				read_input_args(int *in_args, char **argv);
+int				read_input_args(long *in_args, char **argv);
 ssize_t			philo_atoi(const char *str, int *i);
-t_philosophers	*intiate_thred_resources(t_shared *resrs, int *in_args);
+t_philosophers	*intiate_thred_resources(t_shared *resrs, long *in_args);
 void			clear_philos(int n, t_philosophers *philos, t_shared *resrs);
 
 // thread handler

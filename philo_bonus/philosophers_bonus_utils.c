@@ -50,7 +50,7 @@ long	time_since_ate(t_shared	*philo_args)
 	return (intrv);
 }
 
-void	hold_status_vitality(t_shared *philo_args, int hold_time)
+void	hold_status_vitality(t_shared *philo_args, long hold_time)
 {
 	long	start_time;
 	int		time_left;

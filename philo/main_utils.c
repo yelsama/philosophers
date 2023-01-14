@@ -65,7 +65,7 @@ static int	create_locks_for_threds(t_shared *resrs)
 	return (1);
 }
 
-t_philosophers	*intiate_thred_resources(t_shared *resrs, long *in_args)
+t_philosophers	*intiate_thred_resources(t_shared *resrs, int *in_args)
 {
 	t_philosophers	*philo_threds;
 
@@ -90,7 +90,7 @@ t_philosophers	*intiate_thred_resources(t_shared *resrs, long *in_args)
 	return (philo_threds);
 }
 
-int	read_input_args(long *in_args, char **argv)
+int	read_input_args(int *in_args, char **argv)
 {
 	int	i;
 	int	n;

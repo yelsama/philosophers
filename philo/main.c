@@ -31,7 +31,7 @@ static int	launch_threds(t_shared *resrc, t_philosophers *philo_threds)
 	return (1);
 }
 
-static int	create_philosophers(long *in_args)
+static int	create_philosophers(int *in_args)
 {
 	t_philosophers	*philo_threds;
 	t_shared		resrc;
@@ -48,7 +48,7 @@ static int	create_philosophers(long *in_args)
 
 int	main(int argc, char **argv)
 {
-	long	in_args[5];
+	int	in_args[5];
 
 	if (argc < 5 || argc > 6)
 		return (write(2, "Error, number of arguments\n", 27), 1);

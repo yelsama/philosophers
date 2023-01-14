@@ -12,7 +12,7 @@
 
 #include "philosophers_bonus.h"
 
-static int	create_philosophers(long *in_args)
+static int	create_philosophers(int *in_args)
 {
 	t_shared		philo_args;
 	int				forks_pair;
@@ -42,7 +42,7 @@ static int	create_philosophers(long *in_args)
 
 int	main(int argc, char **argv)
 {
-	long	in_args[5];
+	int	in_args[5];
 
 	if (argc < 5 || argc > 6)
 		return (write(2, "Error, number of arguments\n", 27), 1);

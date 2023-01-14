@@ -44,9 +44,9 @@ typedef struct s_shared
 }	t_shared;
 
 //main utilities
-int		read_input_args(long *in_args, char **argv);
+int		read_input_args(int *in_args, char **argv);
 ssize_t	philo_atoi(const char *str, int *i);
-void	fill_philo_args(t_shared *philo_args, long *in_args);
+void	fill_philo_args(t_shared *philo_args, int *in_args);
 
 //Initiate and make processes as philosophers
 void	launch_philosophers(t_shared *philo_args);
@@ -55,7 +55,7 @@ void	launch_philosophers(t_shared *philo_args);
 void	randevu_dining_togather(t_shared *philo_args, int philo_tag);
 void	time_since_start(t_shared	*philo_args);
 long	time_since_ate(t_shared	*philo_args);
-void	hold_status_vitality(t_shared *philo_args, int hold_time);
+void	hold_status_vitality(t_shared *philo_args, long hold_time);
 void	end_philosophers(int *philo_pids, int philos_count);
 
 #endif

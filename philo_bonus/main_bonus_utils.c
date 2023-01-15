@@ -6,7 +6,7 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 12:36:53 by ymohamed          #+#    #+#             */
-/*   Updated: 2023/01/09 23:29:16 by ymohamed         ###   ########.fr       */
+/*   Updated: 2023/01/15 23:19:07 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,5 @@ int	read_input_args(int *in_args, char **argv)
 		if (in_args[i - 1] < 1)
 			return (0);
 	}
-	if (i == 4)
-		in_args[i] = -1;
 	return (1);
 }

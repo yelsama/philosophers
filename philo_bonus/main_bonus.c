@@ -6,7 +6,7 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 00:40:38 by ymohamed          #+#    #+#             */
-/*   Updated: 2023/01/12 18:10:46 by ymohamed         ###   ########.fr       */
+/*   Updated: 2023/01/15 23:18:05 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,11 @@ static int	create_philosophers(int *in_args)
 int	main(int argc, char **argv)
 {
 	int	in_args[5];
+	int	i;
 
+	i = -1;
+	while (++i < 5)
+		in_args[i] = -1;
 	if (argc < 5 || argc > 6)
 		return (write(2, "Error, number of arguments\n", 27), 1);
 	if (!read_input_args(in_args, argv))

@@ -6,7 +6,7 @@
 /*   By: ymohamed <ymohamed@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 00:27:09 by ymohamed          #+#    #+#             */
-/*   Updated: 2023/01/12 18:53:06 by ymohamed         ###   ########.fr       */
+/*   Updated: 2023/01/15 23:21:35 by ymohamed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <sys/time.h>
 # include <signal.h>
 # include <limits.h>
+# include <pthread.h>
 
 # define SEM_FORKS "forks_sem"
 # define SEM_HRT_BT "all_one_heart"
@@ -27,6 +28,7 @@
 typedef struct s_shared
 {
 	int				no_philos;
+	int				philo_tag;
 	int				meals_per_philo;
 	int				alive;
 	int				hunger;
@@ -41,6 +43,8 @@ typedef struct s_shared
 	struct timeval	hngr_timer;
 	sem_t			*forks_holder;
 	sem_t			*all_heart_beating;
+	pthread_t		vitality;
+	pthread_t		actions;
 }	t_shared;
 
 //main utilities
@@ -57,5 +61,9 @@ void	time_since_start(t_shared	*philo_args);
 long	time_since_ate(t_shared	*philo_args);
 void	hold_status_vitality(t_shared *philo_args, long hold_time);
 void	end_philosophers(int *philo_pids, int philos_count);
+
+//handle waiting at thinking
+void	*vitality_hndlr(void *local);
+void	*actions_hndlr(void *local);
 
 #endif

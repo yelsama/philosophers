@@ -103,7 +103,7 @@ int	read_input_args(int *in_args, char **argv)
 		if (in_args[i - 1] < 1)
 			return (0);
 	}
-	if (i == 5)
+	if (i == 4)
 		in_args[i] = -1;
 	return (1);
 }
